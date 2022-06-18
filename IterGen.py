@@ -14,7 +14,6 @@ class MyList:
                 return self.my_list[self.cursor - 1]
             else:
                 self.my_list = list(self.my_list[self.cursor - 1]) + self.my_list[self.cursor:]
-                print(self.my_list)
                 self.cursor = 0
                 return self.__next__()
         else:
@@ -37,5 +36,5 @@ if __name__ == '__main__':
                    ]
     for i in MyList(nested_list):
         print(i)
-    for item in flat_generator(nested_list):
-        print(item)
+    # for item in flat_generator(nested_list):
+    #     print(item)
