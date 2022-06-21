@@ -1,3 +1,6 @@
+from Decorators import logger
+
+
 class MyList:
 
     def __init__(self, my_list: list):
@@ -28,13 +31,3 @@ def flat_generator(some_list):
             yield from flat_generator(list_item)
 
 
-if __name__ == '__main__':
-    nested_list = [1,
-                   ['a', 'b', 'c'],
-                   ['d', ['e', 'f'], 'h', False],
-                   [1, 2, None]
-                   ]
-    for i in MyList(nested_list):
-        print(i)
-    # for item in flat_generator(nested_list):
-    #     print(item)
